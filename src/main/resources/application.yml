@@ -1,0 +1,48 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    name: root
+    data-password: fc!@.1991
+    url: 127.0.0.1:3306/xwtech
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.qq.com
+    username: 531739331@qq.com
+    password: didnxrdiacntbicg
+  session:
+    store-type: redis
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    cache: false
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+
+endpoint:
+  default:
+    web:
+      enabled: true
